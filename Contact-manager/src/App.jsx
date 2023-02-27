@@ -5,13 +5,13 @@ import AddContact from './Components/AddContact';
 
 
 
-
 function App() {
 
   return (
     <>
       <Header/>
       <AddContact/>
+   
     </>
   )
 }
