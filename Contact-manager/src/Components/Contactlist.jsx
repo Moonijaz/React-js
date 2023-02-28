@@ -1,9 +1,6 @@
 
 import './Contactlist.css';
 import './AddContact'
-
-//Sure! Here's an example of how you can write the JSX code to achieve what you described:
-
 import React, { useState } from 'react';
 
 function Contactlist() {
@@ -41,16 +38,15 @@ function Contactlist() {
         </div>
       </form>
       <h2>Contact List</h2>
-      <ul>
+      <ol>
         {contacts.map((contact, index) => (
           <li key={index}>
-            Name: {contact.name}, Email: {contact.email}
+            Name: {contact.name},<br /> Email: {contact.email}
           </li>
         ))}
-      </ul>
+      </ol>
     </div>
   );
 }
 
 export default Contactlist;
-//In this code, we use the  `useState`  hook to manage the state of the contact list. When the form is submitted, the  `handleSubmit`  function is called, which retrieves the values of the name and email inputs and adds a new contact to the list. The contact list is then displayed below the form.
