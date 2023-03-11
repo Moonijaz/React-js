@@ -3,7 +3,7 @@ import './Header.css'
 export default function Header() {
   return (
     <div className='head'>
-            <h2>Contact Manager</h2>
+            <h2>Todo List</h2>
             <hr class="shadow"/>
     </div>
   )
