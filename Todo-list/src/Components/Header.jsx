@@ -4,7 +4,7 @@ export default function Header() {
   return (
     <div className='head'>
             <h2>Todo List</h2>
-            <hr class="shadow"/>
+            <hr className="shadow"/>
     </div>
   )
 }
