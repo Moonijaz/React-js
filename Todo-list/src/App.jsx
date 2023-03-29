@@ -5,6 +5,7 @@ import Lists from './Components/Todo_list';
 import React, { useState } from 'react'; // Import React and useState
 
 function App() {
+  // for simply adding ata
 // const [itemList, setItemList] = useState([]); // Define a state to hold the item list
 //
 //  const handleAddlist = (newlist) => {
@@ -20,6 +21,12 @@ function App() {
       name: newlist.name,
     };
     setItemList([...itemList, newItem]);
+
+    // Addinf delete function
+    const handleDeleteItem = (itemId) => {
+      const updatedList = itemList.filter(item => item.id !== itemId);
+      setItemList(updatedList);
+      <Lists itemtoadd={itemList} onDeleteItem={handleDeleteItem} />
 
   return (
     <>
