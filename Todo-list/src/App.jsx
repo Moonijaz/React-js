@@ -5,12 +5,21 @@ import Lists from './Components/Todo_list';
 import React, { useState } from 'react'; // Import React and useState
 
 function App() {
-  const [itemList, setItemList] = useState([]); // Define a state to hold the item list
+// const [itemList, setItemList] = useState([]); // Define a state to hold the item list
+//
+//  const handleAddlist = (newlist) => {
+//    // Function to add a new list item
+//    setItemList([...itemList, newlist]);
+//  };
 
   const handleAddlist = (newlist) => {
-    // Function to add a new list item
-    setItemList([...itemList, newlist]);
-  };
+    // Generate a unique ID for the new item
+    const id = Date.now();
+    const newItem = {
+      id: id,
+      name: newlist.name,
+    };
+    setItemList([...itemList, newItem]);
 
   return (
     <>
