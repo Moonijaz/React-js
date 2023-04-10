@@ -28,21 +28,29 @@ input::placeholder {
   }
 
  .delbutton{
-    background: none;
-    margin-left: 8px;
-    width: 30px;
-    height: 30px;
-    border-radius: 37%;
-    background-color: #ff1b14;
-    color: #fff;
-    font-size: 21px;
-    border: none;
-    cursor: pointer;
-    transform: rotate(45deg);
-    display: inline-block; /* Allow text to be centered */
+  text-align: center;
+  line-height: 20px;
+  background: none;
+  margin-right: 61px;
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  background-color: #ff1b14;
+  color: #fff;
+  font-size: 21px;
+  border: none;
+  cursor: pointer;
+  transform: rotate(45deg);
+  display: inline-block;
+  position: absolute;
+  right: 10px;
  } 
  .delbutton:hover {
     background-color: #ac120d; /* Change background color on hover */
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Add a shadow on hover */
   }
+
+ li{
+  margin-top: 11px;
+ } 
   
