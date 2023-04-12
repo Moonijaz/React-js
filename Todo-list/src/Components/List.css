@@ -3,9 +3,26 @@
 }
 input{
     height: 25px;
-}
-.btn_btn_primary{
-    background: none;
-    margin-left: 3px;
     border: none;
+    font-size: medium;
 }
+input::placeholder {
+    text-decoration: underline;
+  }
+  
+.btn_btn_primary{
+        background: none;
+        width: 40px;
+        height: 40px;
+        border-radius: 37%;
+        background-color: #3498db;
+        color: #fff;
+        font-size: 21px;
+        border: none;
+        cursor: pointer;
+}
+.btn_btn_primary:hover {
+    background-color: #2980b9; /* Change background color on hover */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Add a shadow on hover */
+  }
+  
