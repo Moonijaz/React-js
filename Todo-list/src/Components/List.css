@@ -1,3 +1,9 @@
 .ui_form{
-    margin: 45px;
+  
+}
+input{
+    height: 25px;
+}
+.btn_btn_primary{
+    margin-left: 3px;
 }
