@@ -25,4 +25,23 @@ input::placeholder {
     background-color: #2980b9; /* Change background color on hover */
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Add a shadow on hover */
   }
+
+ .delbutton{
+    background: none;
+    margin-left: 8px;
+    width: 30px;
+    height: 30px;
+    border-radius: 37%;
+    background-color: #ff1b14;
+    color: #fff;
+    font-size: 21px;
+    border: none;
+    cursor: pointer;
+    transform: rotate(45deg);
+    display: inline-block; /* Allow text to be centered */
+ } 
+ .delbutton:hover {
+    background-color: #ac120d; /* Change background color on hover */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Add a shadow on hover */
+  }
   
