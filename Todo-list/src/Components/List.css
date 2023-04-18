@@ -1,5 +1,6 @@
-.ui_form{
-  
+.list-main{
+  display: inline-block;
+  margin-left: 106px;
 }
 input{
     height: 25px;
@@ -43,7 +44,7 @@ input::placeholder {
   transform: rotate(45deg);
   display: inline-block;
   position: absolute;
-  right: 10px;
+  right: 400px;
  } 
  .delbutton:hover {
     background-color: #ac120d; /* Change background color on hover */
