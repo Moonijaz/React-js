@@ -17,12 +17,14 @@ export default function Addlist({ onAddlist }) {
   };
 
   return (
+    <div className='body'>
     <div className='head'>
       <form className="ui_form" onSubmit={handleSubmit}>
-        <label> Add list</label>
+       {/* <label> Add list</label>*/} 
         <input type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder="Add your task/items" />
-        <button className="btn btn-primary" type="submit">Add</button>
+        <button className="btn_btn_primary" type="submit">+</button>
       </form>
     </div>
+   </div>
   );
 }
