@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './List.css'
 function Lists({ itemtoadd, onDeleteItem }) {
   return (
     <div>
@@ -8,7 +8,7 @@ function Lists({ itemtoadd, onDeleteItem }) {
         {itemtoadd.map((list, index) => (
           <li key={list.id}>
             Name: {list.name}
-            <button onClick={() => onDeleteItem(list.id)}>Delete</button>
+            <button className='delbutton' onClick={() => onDeleteItem(list.id)}>+</button>
           </li>
         ))}
       </ol>
