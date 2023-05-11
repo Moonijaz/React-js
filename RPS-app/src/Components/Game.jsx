@@ -1,20 +1,60 @@
-import React from 'react'
-//import './Game.css'
+import React, { useState } from "react";
 
-export default function Game() {
-  
+function Game() {
+  const [playerVal, setPlayerVal] = useState(null);
+  const [computerVal, setComputerVal] = useState(null);
+  const [playerScore, setPlayerScore] = useState(0);
+  const [compScore, setCompScore] = useState(0);
+
+  const logic = (playerVal, computerVal) => {
+    if (playerVal === computerVal) {
+      return 0;
+    } else if (
+      (playerVal === "ROCK" && computerVal === "SCISSORS") ||
+      (playerVal === "SCISSORS" && computerVal === "PAPER") ||
+      (playerVal === "PAPER" && computerVal === "ROCK")
+    ) {
+      return 1;
+    } else {
+      return -1;
+    }
+  };
+
+  const decision = (playerChoice) => {
+    const choices = ["ROCK", "PAPER", "SCISSORS"];
+    const compChoice = choices[Math.floor(Math.random() * choices.length)];
+    const val = logic(playerChoice, compChoice);
+
+    if (val === 1) {
+      setPlayerVal(playerChoice);
+      setComputerVal(compChoice);
+      setPlayerScore(playerScore + 1);
+    } else if (val === -1) {
+      setPlayerVal(playerChoice);
+      setComputerVal(compChoice);
+      setCompScore(compScore + 1);
+    } else {
+      setComputerVal(compChoice);
+      setPlayerVal(playerChoice);
+    }
+  };
+
   return (
     <div className='main'>
-      <div className='header'> Rock, Paper , Scissor Game</div>
-      <div className='btn'> 
-        <button type='submit'>Rock</button>
-        <button type='submit'>Paper</button>
-        <button type='submit'> Scissor</button>
-
-        <div> Your Score is : </div>
-        <div>Computer Score is :</div>
+      <div className='header'> Rock, Paper, Scissors Game</div>
+      <div className='btn'>
+        <button onClick={() => decision("ROCK")}>Rock</button>
+        <button onClick={() => decision("PAPER")}>Paper</button>
+        <button onClick={() => decision("SCISSORS")}>Scissor</button>
       </div>
-
+      <div className="content">
+        <p>Your choice: {playerVal}</p>
+        <p>Computer's choice: {computerVal}</p>
+        <h2>Your Score: {playerScore}</h2>
+        <h2>Computer Score: {compScore}</h2>
+      </div>
     </div>
-  )
+  );
 }
+
+export default Game;
