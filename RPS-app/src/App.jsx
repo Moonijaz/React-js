@@ -1,14 +1,13 @@
-import { useState } from 'react'
-import Game from './Components/Game'
-import './App.css'
+import React from 'react'
+import Game from './Components/Game.jsx'
+
 
 function App() {
- return(
-  <>
-<h1>hi</h1>
-<Game/>
-  </>
- )
+  return (
+    <>
+      <Game />
+    </>
+  )
 }
 
 export default App

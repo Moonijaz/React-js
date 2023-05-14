@@ -1,40 +1,46 @@
 import React, { useState } from "react";
-import './Game.css';
+import './Game.css'; // Import the CSS file
 
 function Game() {
+  // Define state variables for player's choice, computer's choice, and scores
   const [playerVal, setPlayerVal] = useState(null);
   const [computerVal, setComputerVal] = useState(null);
   const [playerScore, setPlayerScore] = useState(0);
   const [compScore, setCompScore] = useState(0);
 
+  // Logic to determine the winner of a round
   const logic = (playerVal, computerVal) => {
     if (playerVal === computerVal) {
-      return 0;
+      return 0; // It's a tie
     } else if (
       (playerVal === "ROCK" && computerVal === "SCISSORS") ||
       (playerVal === "SCISSORS" && computerVal === "PAPER") ||
       (playerVal === "PAPER" && computerVal === "ROCK")
     ) {
-      return 1;
+      return 1; // Player wins
     } else {
-      return -1;
+      return -1; // Computer wins
     }
   };
 
+  // Function to make a choice for the player and computer
   const decision = (playerChoice) => {
     const choices = ["ROCK", "PAPER", "SCISSORS"];
-    const compChoice = choices[Math.floor(Math.random() * choices.length)];
-    const val = logic(playerChoice, compChoice);
+    const compChoice = choices[Math.floor(Math.random() * choices.length)]; // Randomly select a choice
+    const val = logic(playerChoice, compChoice); // Determine the result of the round
 
     if (val === 1) {
+      // Player wins
       setPlayerVal(playerChoice);
       setComputerVal(compChoice);
-      setPlayerScore(playerScore + 1);
+      setPlayerScore(playerScore + 1); // Increment player's score
     } else if (val === -1) {
+      // Computer wins
       setPlayerVal(playerChoice);
       setComputerVal(compChoice);
-      setCompScore(compScore + 1);
+      setCompScore(compScore + 1); // Increment computer's score
     } else {
+      // It's a tie
       setComputerVal(compChoice);
       setPlayerVal(playerChoice);
     }
