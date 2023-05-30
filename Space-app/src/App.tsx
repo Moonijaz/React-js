@@ -1,5 +1,5 @@
-import { useState } from 'react'
 
+import Navbar from "@/scenes/Navbar"
 
 
 function App() {
@@ -7,7 +7,9 @@ function App() {
 
   return (
     <>
-      <h1>hi</h1>
+      <div className='app bg-gray-20'>
+        <Navbar />
+      </div>
     </>
   )
 }
