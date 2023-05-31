@@ -5,9 +5,9 @@ function Lists({ itemtoadd, onDeleteItem }) {
     <div className='list-main'>
       <h2>Items in list</h2>
       <ol>
-        {itemtoadd.map((list, index) => (
-          <li key={list.id}>
-            Name: {list.name}
+        {itemtoadd.map((list) => (
+          <li >
+             {list.name}
             <button className='delbutton' onClick={() => onDeleteItem(list.id)}>+</button>
           </li>
         ))}
