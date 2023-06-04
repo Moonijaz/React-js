@@ -1,8 +1,11 @@
 .navbar {
-  background-color: #fff;
-  color: #333;
+  background-color: #1b2734;
   position: relative;
   z-index: 9999;
+}
+
+.navbar-link, .navbar-logo {
+  color: aliceblue;
 }
 
 .navbar-container {
@@ -10,19 +13,21 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding: 15px;
+  padding: 17px;
 }
 
 .navbar-logo {
   font-size: 24px;
   font-weight: bold;
-  color: #333;
   text-decoration: none;
 }
 
 .navbar-toggle {
   display: none;
   cursor: pointer;
+}
+span.navbar-toggle-icon {
+  background-color: aliceblue;
 }
 
 .navbar-toggle-icon {
@@ -38,8 +43,8 @@
 .navbar-menu {
   display: flex;
   justify-content: flex-end;
- 
 }
+
 .navbar-menu.active {
   display: block;
 }
@@ -60,34 +65,37 @@
 .navbar-link {
   font-size: 16px;
   font-weight: bold;
-  color: #333;
   text-decoration: none;
 }
 
 @media screen and (max-width: 768px) {
+  ul.navbar-items {
+    background-color: #1b2734;
+    color: aliceblue;
+    text-align: left;
+  }
+
   .navbar-toggle {
     display: block;
   }
-  
+
   .navbar-menu {
     display: none;
     position: absolute;
     top: 60px;
     left: 0;
     width: 100%;
-    background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   }
-  
-  .navbar-items {
-    display: block;
-    text-align: center; 
-    display: block;
 
+  ul.navbar-items {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    display: block;
+    text-align: left;
   }
-  
 
-  
   .navbar-link {
     display: block;
     font-size: 18px;

@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import './Navbar.css'
 export default function Navbar() {
- const [isTogled , setTogle] = useState(false); {/*initially we want to hise our tems thats why we have used here false */}
+ const [isTogled , setTogle] = useState(true); {/*initially we want to hise our tems thats why we have used here false */}
 
  const handleIcon = () => {
    setTogle(!isTogled);
