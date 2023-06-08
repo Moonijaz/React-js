@@ -1,0 +1,104 @@
+.navbar {
+    background-color: #1b2734;
+    position: relative;
+    z-index: 9999;
+  }
+  
+  .navbar-link, .navbar-logo {
+    color: aliceblue;
+  }
+  
+  .navbar-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 17px;
+  }
+  
+  .navbar-logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .navbar-toggle {
+    display: none;
+    cursor: pointer;
+  }
+  span.navbar-toggle-icon {
+    background-color: aliceblue;
+  }
+  
+  .navbar-toggle-icon {
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-image: url('https://cdn4.iconfinder.com/data/icons/wirecons-free-vector-icons/32/menu-alt-512.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  .navbar-menu {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .navbar-menu.active {
+    display: block;
+  }
+  
+  .navbar-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar-item {
+    margin: 0 10px;
+  }
+  
+  .navbar-link {
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  @media screen and (max-width: 768px) {
+    ul.navbar-items {
+      background-color: #1b2734;
+      color: aliceblue;
+      text-align: left;
+    }
+  
+    .navbar-toggle {
+      display: block;
+    }
+  
+    .navbar-menu {
+      display: none;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    }
+  
+    ul.navbar-items {
+      padding: 0;
+      margin: 0;
+      text-align: center;
+      display: block;
+      text-align: left;
+    }
+  
+    .navbar-link {
+      display: block;
+      font-size: 18px;
+    }
+  }
+  
