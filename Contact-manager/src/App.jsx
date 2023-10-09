@@ -1,4 +1,9 @@
+import React from 'react'
 import { useState } from 'react'
+import Header from "./Components/Header"
+import AddContact from "./Components/AddContact"
+import ContactCard from "./Component/ContactCard"
+import AddContactList from "./Components/AddContactList"
 
 
 
@@ -7,7 +12,10 @@ function App() {
 
   return (
     <>
-      <h1>h1</h1>
+      <Header/>
+      <AddContact/>
+      <ContactCard/>
+      <AddContactList/>
     </>
   )
 }
