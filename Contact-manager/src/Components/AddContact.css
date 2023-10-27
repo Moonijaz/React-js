@@ -8,6 +8,9 @@
 .field{
     padding-block: 1rem;
 }
-.ui-button-blue{
-
+input{
+    margin-left: 2rem;
+}
+label{
+    font-size: medium;
 }
