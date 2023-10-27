@@ -8,8 +8,8 @@ export default class AddContact extends React.Component{
                 <h2 className="h1">Add Contact</h2>
                 <form className="ui form">
                     <div className="field">
-                        <label>Name</label> <input type="text"  name="Name" placeholder="Name" /> <br></br>
-                        <label>Email</label> <input type="text"  name="Email" placeholder="Email" />
+                        <label>Name</label><br /> <input type="text"  name="Name" placeholder="Name" /> <br></br>
+                        <label>Email</label> <br /><input type="text"  name="Email" placeholder="Email" /> <br></br>
                         <button className="ui button blue">Add</button>
                     </div>
                 </form>
