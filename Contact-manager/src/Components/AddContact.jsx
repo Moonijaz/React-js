@@ -1,5 +1,5 @@
 import React from "react";
-import './AddContact.css'
+import './AddContact.css';
 
 export default class AddContact extends React.Component{
     render(){
