@@ -26,13 +26,14 @@ function App() {
     const handleDeleteItem = (itemId) => {
       const updatedList = itemList.filter(item => item.id !== itemId);
       setItemList(updatedList);
-      <Lists itemtoadd={itemList} onDeleteItem={handleDeleteItem} />
 
   return (
     <>
       <Header />
       <Addlist onAddlist={handleAddlist} /> {/* Pass the onAddlist prop */}
-      <Lists itemtoadd={itemList} /> {/* Pass the itemtoadd prop */}
+     {/* <Lists itemtoadd={itemList} /> {/* Pass the itemtoadd prop */}
+      <Lists itemtoadd={itemList} onDeleteItem={handleDeleteItem} />
+
     </>
   )
 }
