@@ -3,6 +3,8 @@ import './Game.css'
 
 export default function Game() {
   return (
-    <div>Game</div>
+    <div className='main'>
+        Rock, Paper , Scissor Game
+    </div>
   )
 }
