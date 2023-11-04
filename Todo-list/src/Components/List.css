@@ -5,6 +5,7 @@ input{
     height: 25px;
     border: none;
     font-size: medium;
+    outline: none;
 }
 input::placeholder {
     text-decoration: underline;
