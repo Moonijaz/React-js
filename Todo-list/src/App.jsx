@@ -23,9 +23,11 @@ function App() {
 
   return (
     <>
+    <div className='main'>
       <Header />
       <Addlist onAddlist={handleAddlist} />
       <Lists itemtoadd={itemList} onDeleteItem={handleDeleteItem} />
+      </div>
     </>
   )
 }

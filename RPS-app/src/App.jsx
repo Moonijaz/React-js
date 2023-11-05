@@ -1,11 +1,12 @@
 import { useState } from 'react'
-import './App.css'
 import Game from './Components/Game'
+import './App.css'
 
 function App() {
  return(
   <>
-  <Game/>
+<h1>hi</h1>
+<Game/>
   </>
  )
 }

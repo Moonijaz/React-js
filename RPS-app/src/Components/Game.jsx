@@ -1,17 +1,17 @@
 import React from 'react'
-import './Game.css'
+//import './Game.css'
 
 export default function Game() {
 
-   
 
   return (
     <div className='main'>
         <div className='Header'>  Rock, Paper , Scissor Game </div>
-        <button>Rock</button>
-        <button>Paper</button>
-        <button>Scissor</button>
-
+        <div className='button' >
+        <button type="submit">Rock</button>
+        <button type="submit">Paper</button>
+        <button type="submit">Scissor</button>
+        </div>
     </div>
   )
 }
