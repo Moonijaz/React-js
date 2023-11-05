@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import './Game.css';
 
 function Game() {
   const [playerVal, setPlayerVal] = useState(null);
