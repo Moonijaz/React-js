@@ -1,32 +1,51 @@
-import React from 'react'
-import { useState } from 'react'
-import './Navbar.css'
-export default function Navbar() {
- const [isTogled , setTogle] = useState(true); {/*initially we want to hise our tems thats why we have used here false */}
+import React from 'react';
+import { useState } from 'react';
+import './Navbar.css';
+import { Link } from 'react-router-dom';
 
- const handleIcon = () => {
-   setTogle(!isTogled);
- }
+export default function Navbar() {
+  const [isTogled, setTogle] = useState(true);
+
+  const handleIcon = () => {
+    setTogle(!isTogled);
+  };
 
   return (
-   <>
- <nav className="navbar">
+    <>
+      <nav className="navbar">
         <div className="navbar-container">
-          <a className="navbar-logo" href="#">Coursera</a>
+          <Link to="/" className="navbar-logo">
+            Coursera
+          </Link>
           <div className="navbar-toggle" onClick={handleIcon}>
-            <span className="navbar-toggle-icon" ></span>
+            <span className="navbar-toggle-icon"></span>
           </div>
-          <div className= {`navbar-menu ${isTogled ? '' : 'active'}`}> {/*it is better to use template string instead of if else */}
+          <div className={`navbar-menu ${isTogled ? '' : 'active'}`}>
             <ul className="navbar-items">
-              <li className="navbar-item"><a className="navbar-link" href="#">Home</a></li> {/*seperate css for item bcz we want to give space between each item */}
-              <li className="navbar-item"><a className="navbar-link" href="#">Courses</a></li>
-              <li className="navbar-item"><a className="navbar-link" href="#">Degrees</a></li>
-              <li className="navbar-item"><a className="navbar-link" href="#">For Business</a></li>
-            
+              <li className="navbar-item">
+                <Link to="/" className="navbar-link">
+                  Home
+                </Link>
+              </li>
+              <li className="navbar-item">
+                <Link to="/coursesPage" className="navbar-link">
+                  Courses
+                </Link>
+              </li>
+              <li className="navbar-item">
+                <Link to="/degreesPage" className="navbar-link">
+                  Degrees
+                </Link>
+              </li>
+              <li className="navbar-item">
+                <Link to="/businessPage" className="navbar-link">
+                  For Business
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
       </nav>
-   </>
-  )
+    </>
+  );
 }
