@@ -38,6 +38,10 @@
 .navbar-menu {
   display: flex;
   justify-content: flex-end;
+ 
+}
+.navbar-menu.active {
+  display: block;
 }
 
 .navbar-items {
