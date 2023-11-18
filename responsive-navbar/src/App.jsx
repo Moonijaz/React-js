@@ -1,15 +1,15 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Navbar from "./components/Navbar";
 import HomePage from "./components/HomePage";
 import CoursesPage from "./Components/CoursesPage";
 import DegreesPage from "./components/DegreesPage";
 import BusinessPage from "./components/BusinessPage";
+import Navbar from "./Components/Navbar";
 
 const App = () => {
   return (
     <BrowserRouter>  {/* Setting up BrowserRouter to enable routing in the app*/}
-      <Navbar />
+      <Navbar/>
       <Routes>
         <Route path="/" element={<HomePage />}></Route>
         <Route path="/BusinessPage" element={<BusinessPage />}></Route>
